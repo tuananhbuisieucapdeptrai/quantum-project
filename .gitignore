@@ -1,11 +1,34 @@
+# Python and tooling
 .venv/
 __pycache__/
 *.egg-info/
 .ipynb_checkpoints/
 .pytest_cache/
 .ruff_cache/
+*.part
+
+# Downloaded data (recreate with `qmlbench-fetch`)
 data/raw/
 data/processed/
-*.part
-.DS_Store
+
+# Run logs (progress-bar output, not results)
+results/logs/
+
+# Personal application documents
+report/statement_of_interest.*
+
+# LaTeX build by-products
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Editor and OS
 .claude/
+.vscode/
+.idea/
+.DS_Store

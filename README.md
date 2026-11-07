@@ -57,7 +57,7 @@ Test score with 1000 training points (mean of 5 seeds; R², Brier skill score fo
 | Re-uploading circuit | 0.894 | 0.976 | 0.061 | 0.893 |
 
 - **Paper:** [report/main.pdf](report/main.pdf)
-- **Interactive tides demo** (for a general audience): [demo/](demo/)
+- **Interactive tides demo** (for a general audience): <https://tuananhbuisieucapdeptrai.github.io/quantum-project/demo/> (source in [demo/](demo/))
 
 ## Reproducing the paper and demo
 
@@ -89,7 +89,7 @@ src/qmlbench/
   fourier.py        frequency ceilings and model spectra
   run.py            benchmark runner
 scripts/            Fourier analysis, paper assets, demo data
-results/            per-run JSONs, merged parquet, Fourier outputs, logs
+results/            per-run JSONs, merged parquet, Fourier outputs
 report/             paper (main.tex) and its generated tables, figures and numbers
 demo/               static tides demo website
 docs/               problem formulation, Fourier analysis

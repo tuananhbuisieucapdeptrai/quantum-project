@@ -143,8 +143,6 @@ async function main() {
   const xs = T.hours.map((h) => EPOCH_S + h * 3600);
   const obs = Float64Array.from(T.observed);
 
-  document.getElementById("repolink").href = D.repo || "#";
-
   // Section 1: tiles + chart of every model.
   document.getElementById("tiles").innerHTML = SERIES.map(([k, lab, c, dash, , short]) =>
     tile(short || lab, fmtR2(T.r2[k]), "score for 2023", css(c), dash)).join("");
