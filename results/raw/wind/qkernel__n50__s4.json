@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "qkernel",
+ "family": "quantum",
+ "n_train": 50,
+ "seed": 4,
+ "n_test": 2000,
+ "params": "{\"feature_map\": \"angle\", \"reps\": 3, \"bandwidth\": 0.6984705653192727, \"alpha\": 0.01535935391236006}",
+ "cv_loss": 0.055047456223932534,
+ "n_trials": 10,
+ "tune_seconds": 0.1419850408565253,
+ "fit_seconds": 0.010897333035245538,
+ "n_parameters": 50,
+ "rmse": 0.05050112785397917,
+ "mae": 0.03731707948925807,
+ "r2": 0.9759864842106667
+}

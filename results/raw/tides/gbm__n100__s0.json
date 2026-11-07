@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "gbm",
+ "family": "classical",
+ "n_train": 100,
+ "seed": 0,
+ "n_test": 2000,
+ "params": "{\"max_depth\": 5, \"lr\": 0.11387317092169064, \"max_iter\": 321}",
+ "cv_loss": 0.23538141862002138,
+ "n_trials": 10,
+ "tune_seconds": 1.7049192918930203,
+ "fit_seconds": 0.08988062501884997,
+ "n_parameters": null,
+ "rmse": 0.21210319529512872,
+ "mae": 0.17067260948686852,
+ "r2": 0.8502170455561664
+}

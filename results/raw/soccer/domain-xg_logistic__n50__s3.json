@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "domain:xg_logistic",
+ "family": "domain",
+ "n_train": 50,
+ "seed": 3,
+ "n_test": 1162,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 0.0026344589423388243,
+ "n_parameters": 3,
+ "brier": 0.07669305367336493,
+ "log_loss": 0.27756820319994335,
+ "brier_skill": 0.050630879432520426
+}

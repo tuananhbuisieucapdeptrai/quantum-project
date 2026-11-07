@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "domain:harmonic",
+ "family": "domain",
+ "n_train": 250,
+ "seed": 3,
+ "n_test": 2000,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 0.06928879185579717,
+ "n_parameters": 17,
+ "rmse": 0.1444539778142755,
+ "mae": 0.11646747181089225,
+ "r2": 0.9305252518046429
+}

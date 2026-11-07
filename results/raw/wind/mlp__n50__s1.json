@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "mlp",
+ "family": "classical",
+ "n_train": 50,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{\"hidden\": 114, \"layers\": 3, \"alpha\": 2.66207971945416e-06, \"lr\": 0.00011970424904099204}",
+ "cv_loss": 0.05766680723439327,
+ "n_trials": 10,
+ "tune_seconds": 2.0633679581806064,
+ "fit_seconds": 0.0569319580681622,
+ "n_parameters": null,
+ "rmse": 0.12805353759395938,
+ "mae": 0.09844081217566786,
+ "r2": 0.8456037471754828
+}

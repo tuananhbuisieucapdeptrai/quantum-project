@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "vqc",
+ "family": "quantum",
+ "n_train": 500,
+ "seed": 0,
+ "n_test": 1162,
+ "params": "{\"n_layers\": 1, \"lr\": 0.04626362841475587}",
+ "cv_loss": 0.09625826963282218,
+ "n_trials": 10,
+ "tune_seconds": 933.7946450419258,
+ "fit_seconds": 11.48183804191649,
+ "n_parameters": 44,
+ "brier": 0.07657246182097859,
+ "log_loss": 0.279166308160373,
+ "brier_skill": 0.05212366365956689
+}

@@ -1,0 +1,20 @@
+{
+ "dataset": "photoz",
+ "model": "vqc",
+ "family": "quantum",
+ "n_train": 100,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{\"n_layers\": 2, \"lr\": 0.027583475549166746}",
+ "cv_loss": 0.062208155706541125,
+ "n_trials": 10,
+ "tune_seconds": 278.25336566613987,
+ "fit_seconds": 8.878819582983851,
+ "n_parameters": 47,
+ "n_epochs_run": 217,
+ "rmse": 0.03969083430449341,
+ "mae": 0.025414469795861396,
+ "r2": 0.8506536430495792,
+ "sigma_nmad": 0.02322424304718193,
+ "outlier_frac": 0.004
+}

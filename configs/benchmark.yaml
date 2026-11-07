@@ -1,0 +1,15 @@
+# Benchmark grid: every (dataset, model, n_train, seed) combination is one run.
+datasets: [tides, wind, soccer, photoz]
+models:
+  quantum: [vqc, qkernel]
+  classical: [ridge, rff, mlp, gbm, gp]
+  domain: [domain]            # expands to every domain baseline of each dataset
+n_train: [50, 100, 250, 500, 1000]   # training-set sizes (small-data sweep)
+seeds: [0, 1, 2, 3, 4]               # resample training points + model init
+test_cap: 2000                        # fixed random subset of the test set per dataset
+tuning:
+  trials: 10                          # identical budget for every model (~2.5 h full grid, 6 jobs)
+  cv_folds: 3                         # inner CV on the training subsample only
+  metric: auto                        # rmse for regression, brier for probability
+max_qubits: 8
+results_dir: results/raw

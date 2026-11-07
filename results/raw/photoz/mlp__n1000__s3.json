@@ -1,0 +1,19 @@
+{
+ "dataset": "photoz",
+ "model": "mlp",
+ "family": "classical",
+ "n_train": 1000,
+ "seed": 3,
+ "n_test": 2000,
+ "params": "{\"hidden\": 116, \"layers\": 3, \"alpha\": 4.245477585551383e-06, \"lr\": 0.0002597082562486723}",
+ "cv_loss": 0.04063779536378114,
+ "n_trials": 10,
+ "tune_seconds": 14.910267750034109,
+ "fit_seconds": 1.606306792004034,
+ "n_parameters": null,
+ "rmse": 0.05384012290410271,
+ "mae": 0.020413329735187516,
+ "r2": 0.7251939671598716,
+ "sigma_nmad": 0.01673222726742214,
+ "outlier_frac": 0.002
+}

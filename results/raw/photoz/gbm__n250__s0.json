@@ -1,0 +1,19 @@
+{
+ "dataset": "photoz",
+ "model": "gbm",
+ "family": "classical",
+ "n_train": 250,
+ "seed": 0,
+ "n_test": 2000,
+ "params": "{\"max_depth\": 5, \"lr\": 0.042246380742484616, \"max_iter\": 341}",
+ "cv_loss": 0.03185352741365397,
+ "n_trials": 10,
+ "tune_seconds": 2.988937749993056,
+ "fit_seconds": 0.15699283313006163,
+ "n_parameters": null,
+ "rmse": 0.03611802706567234,
+ "mae": 0.023481282728729503,
+ "r2": 0.8763306108644042,
+ "sigma_nmad": 0.021696912483838107,
+ "outlier_frac": 0.0025
+}

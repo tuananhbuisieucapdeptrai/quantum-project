@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "domain:statsbomb_xg",
+ "family": "reference",
+ "n_train": 250,
+ "seed": 2,
+ "n_test": 1162,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 7.562502287328243e-05,
+ "n_parameters": null,
+ "brier": 0.06873725670245236,
+ "log_loss": 0.24431031067466075,
+ "brier_skill": 0.1491142180391275
+}

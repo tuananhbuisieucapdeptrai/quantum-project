@@ -1,0 +1,22 @@
+\begin{table}[H]
+\centering\small\setlength{\tabcolsep}{4.5pt}
+\caption{Test scores with $n=100$ training points: mean $\pm$ standard deviation over five seeds (higher is better). Bold marks the best model trained on the same points. $R^2$ for regression; BSS is the Brier skill score relative to the base rate, for the probability task.}\label{tab:n100}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+ & Model & Tides ($R^2$) & Wind ($R^2$) & Soccer (BSS) & Photo-$z$ ($R^2$) \\
+\midrule
+Classical & Ridge / logistic & $0.891\pm0.012$ & $0.889\pm0.018$ & \best{$0.010\pm0.076$} & $0.772\pm0.055$ \\
+ & Random Fourier features & $0.894\pm0.024$ & $0.959\pm0.027$ & $-0.021\pm0.114$ & $0.803\pm0.098$ \\
+ & Multilayer perceptron & $0.880\pm0.011$ & $0.928\pm0.023$ & $-0.564\pm0.505$ & $-0.268\pm1.376$ \\
+ & Gradient boosting & $0.838\pm0.020$ & $0.825\pm0.050$ & $-0.015\pm0.045$ & $0.835\pm0.008$ \\
+ & Gaussian process & $0.918\pm0.006$ & $0.972\pm0.005$ & $-0.048\pm0.143$ & \best{$0.871\pm0.017$} \\
+\midrule
+Quantum & Re-uploading circuit & $0.828\pm0.036$ & $0.952\pm0.021$ & $-0.009\pm0.019$ & $0.826\pm0.023$ \\
+ & Quantum kernel & $0.826\pm0.019$ & $0.947\pm0.030$ & $-0.083\pm0.178$ & $0.868\pm0.011$ \\
+\midrule
+Domain & Domain method$^{a}$ & \best{$0.926\pm0.005$} & \best{$0.979\pm0.002$} & $-0.006\pm0.090$ & $0.830\pm0.015$ \\
+ & Published reference$^{b}$ & $0.925$ & --- & $0.149$ & --- \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\linewidth}\footnotesize $^{a}$UTide harmonic analysis (tides), binned power curve (wind), distance--angle logistic regression (soccer) and $k$-nearest neighbours (photo-$z$), fitted on the same training points as every other model. $^{b}$NOAA's official tide prediction and StatsBomb's expected-goals model; both are fitted on far more data and mark a practical ceiling rather than a competitor.\end{minipage}
+\end{table}

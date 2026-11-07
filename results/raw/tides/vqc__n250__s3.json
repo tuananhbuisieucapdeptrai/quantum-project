@@ -1,0 +1,18 @@
+{
+ "dataset": "tides",
+ "model": "vqc",
+ "family": "quantum",
+ "n_train": 250,
+ "seed": 3,
+ "n_test": 2000,
+ "params": "{\"n_layers\": 1, \"lr\": 0.013113184629505895}",
+ "cv_loss": 0.1722614846938122,
+ "n_trials": 10,
+ "tune_seconds": 445.57892300002277,
+ "fit_seconds": 25.337516458006576,
+ "n_parameters": 32,
+ "n_epochs_run": 398,
+ "rmse": 0.19067993635321392,
+ "mae": 0.15470751876642178,
+ "r2": 0.8789463281872381
+}

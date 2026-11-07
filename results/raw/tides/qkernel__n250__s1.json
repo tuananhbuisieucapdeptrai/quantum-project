@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "qkernel",
+ "family": "quantum",
+ "n_train": 250,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{\"feature_map\": \"angle\", \"reps\": 1, \"bandwidth\": 0.09355101952499346, \"alpha\": 0.18571843724564743}",
+ "cv_loss": 0.13954389115802798,
+ "n_trials": 10,
+ "tune_seconds": 0.7221466659102589,
+ "fit_seconds": 0.03081737505272031,
+ "n_parameters": 250,
+ "rmse": 0.15241069054019052,
+ "mae": 0.12191989491656637,
+ "r2": 0.9226609501886068
+}

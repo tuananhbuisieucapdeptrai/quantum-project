@@ -1,0 +1,19 @@
+{
+ "dataset": "photoz",
+ "model": "qkernel",
+ "family": "quantum",
+ "n_train": 1000,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{\"feature_map\": \"iqp\", \"reps\": 3, \"bandwidth\": 0.35738208330324767, \"alpha\": 0.014166503840925476}",
+ "cv_loss": 0.026674556438214193,
+ "n_trials": 10,
+ "tune_seconds": 2.5621944169979542,
+ "fit_seconds": 0.4037851670291275,
+ "n_parameters": 1000,
+ "rmse": 0.03143288352238778,
+ "mae": 0.01911702089422215,
+ "r2": 0.9063338598742868,
+ "sigma_nmad": 0.016937199174817525,
+ "outlier_frac": 0.0035
+}

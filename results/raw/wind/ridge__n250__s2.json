@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "ridge",
+ "family": "classical",
+ "n_train": 250,
+ "seed": 2,
+ "n_test": 2000,
+ "params": "{\"alpha\": 0.5195481444645877}",
+ "cv_loss": 0.09491910557222218,
+ "n_trials": 10,
+ "tune_seconds": 0.03952304203994572,
+ "fit_seconds": 0.0017162910662591457,
+ "n_parameters": null,
+ "rmse": 0.1064589045694196,
+ "mae": 0.0838934472380063,
+ "r2": 0.893286938261134
+}

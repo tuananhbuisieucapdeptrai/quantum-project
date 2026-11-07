@@ -1,0 +1,19 @@
+{
+ "dataset": "photoz",
+ "model": "domain:knn",
+ "family": "domain",
+ "n_train": 1000,
+ "seed": 2,
+ "n_test": 2000,
+ "params": "{\"k\": 4}",
+ "cv_loss": 0.02965447289183575,
+ "n_trials": 10,
+ "tune_seconds": 0.14477104088291526,
+ "fit_seconds": 0.014667832991108298,
+ "n_parameters": null,
+ "rmse": 0.03639151335200665,
+ "mae": 0.023239728719695613,
+ "r2": 0.8744506669889862,
+ "sigma_nmad": 0.020028195180091697,
+ "outlier_frac": 0.003
+}

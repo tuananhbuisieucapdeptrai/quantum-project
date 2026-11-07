@@ -1,0 +1,19 @@
+{
+ "dataset": "photoz",
+ "model": "gp",
+ "family": "classical",
+ "n_train": 250,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 0.09662920795381069,
+ "n_parameters": null,
+ "rmse": 0.03017422273271457,
+ "mae": 0.01948531382397185,
+ "r2": 0.913684982891623,
+ "sigma_nmad": 0.018105159544903687,
+ "outlier_frac": 0.0015
+}

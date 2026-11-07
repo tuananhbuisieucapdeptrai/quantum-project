@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "ridge",
+ "family": "classical",
+ "n_train": 500,
+ "seed": 4,
+ "n_test": 2000,
+ "params": "{\"alpha\": 0.00010898871475877331}",
+ "cv_loss": 0.13858058583189106,
+ "n_trials": 10,
+ "tune_seconds": 0.039780457969754934,
+ "fit_seconds": 0.0014532499480992556,
+ "n_parameters": null,
+ "rmse": 0.17330411102979312,
+ "mae": 0.13895566000030135,
+ "r2": 0.9000032925629077
+}

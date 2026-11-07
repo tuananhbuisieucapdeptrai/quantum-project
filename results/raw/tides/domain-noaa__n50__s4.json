@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "domain:noaa",
+ "family": "reference",
+ "n_train": 50,
+ "seed": 4,
+ "n_test": 2000,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 0.00011683395132422447,
+ "n_parameters": null,
+ "rmse": 0.1500138626927525,
+ "mae": 0.123982,
+ "r2": 0.9250743087982413
+}

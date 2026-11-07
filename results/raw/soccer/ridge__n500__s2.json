@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "ridge",
+ "family": "classical",
+ "n_train": 500,
+ "seed": 2,
+ "n_test": 1162,
+ "params": "{\"alpha\": 0.5195481444645877}",
+ "cv_loss": 0.08424921928923872,
+ "n_trials": 10,
+ "tune_seconds": 0.12812383309938014,
+ "fit_seconds": 0.0028044169303029776,
+ "n_parameters": null,
+ "brier": 0.07606378458837805,
+ "log_loss": 0.2781089242265277,
+ "brier_skill": 0.05842048499912955
+}

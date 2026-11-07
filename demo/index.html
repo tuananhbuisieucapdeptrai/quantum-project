@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can a quantum computer predict the tide? An interactive demo</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uplot@1.6.31/dist/uPlot.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="viz-root">
+
+<header>
+  <p class="kicker">Quantum machine learning &middot; interactive demo</p>
+  <h1>Can a quantum computer predict the tide?</h1>
+  <p class="lede">
+    Twice a day the sea at San Francisco rises and falls, by up to about two metres, pulled by the Moon
+    and the Sun. Because the pull repeats in regular rhythms, the tide is very predictable.
+    That makes it a good test for a new kind of prediction model, one that runs on a
+    quantum computer. This page shows how well these models do, compared with the methods
+    oceanographers already use. You don't need any physics or quantum background.
+  </p>
+</header>
+
+<section aria-labelledby="s0">
+  <h2 id="s0">The idea in three steps</h2>
+  <ol class="steps">
+    <li>
+      <span class="step-num" aria-hidden="true">1</span>
+      <h3>Describe each hour by five &ldquo;tidal clocks&rdquo;</h3>
+      <p>The tide is driven by a few repeating rhythms. The biggest comes from the Moon and repeats
+        every 12 h 25 min; another comes from the Sun and repeats every 12 h; others repeat about
+        once a day. Picture each rhythm as the hand of a clock. Five clock-hand positions
+        describe any hour.</p>
+    </li>
+    <li>
+      <span class="step-num" aria-hidden="true">2</span>
+      <h3>Turn each clock hand into a qubit</h3>
+      <p>A qubit, the basic unit of a quantum computer, can be rotated like a dial. Each clock
+        hand sets how far one qubit is rotated, so five qubits store one hour. Rotations wrap
+        around naturally, just like the clocks do.</p>
+    </li>
+    <li>
+      <span class="step-num" aria-hidden="true">3</span>
+      <h3>Predict from similar moments</h3>
+      <p>To predict a new hour, the model asks how similar it is to each hour it has already
+        seen, by comparing their qubit states. Hours whose clocks point the same way get more
+        say. The prediction is a weighted blend of their water levels.</p>
+    </li>
+  </ol>
+  <p class="note">Every model on this page learned from <strong>1000 hours of 2021&ndash;2022</strong>
+    and is tested on <strong>all of 2023</strong>, a year it never saw. The quantum models run on
+    a simulated quantum computer, which gives the same answers a perfect, noise-free one would.</p>
+</section>
+
+<section aria-labelledby="s1">
+  <h2 id="s1">How close do the predictions get?</h2>
+  <p>Each card shows one model's <strong>score</strong> for 2023. A score of 1 would be perfect;
+    0 means no better than always guessing the average water level. A score of 0.93 means the
+    model captures about 93% of the tide's ups and downs.</p>
+  <div class="tiles" id="tiles"></div>
+  <div class="controls">
+    <button type="button" id="prev" aria-label="Previous week">&larr;</button>
+    <label for="week" class="grow"><span>Showing the week of <strong id="weeklabel"></strong></span>
+      <input type="range" id="week" min="0" max="51" step="1" value="10">
+    </label>
+    <button type="button" id="next" aria-label="Next week">&rarr;</button>
+  </div>
+  <div id="chart1" class="chart" role="img" aria-label="Observed and predicted water level for the selected week"></div>
+  <p class="note">The black line is what really happened. Click a name under the chart to show or
+    hide that model, and hover to read the values. Move the slider to another week. Where every
+    model misses in the same way, the cause is usually wind or a storm pushing water around,
+    which nothing based on the clocks alone can foresee.</p>
+  <details class="explain">
+    <summary>Who are the other models?</summary>
+    <dl>
+      <dt>Quantum kernel</dt><dd>The quantum model described above: it predicts from similar moments, with similarity measured by a quantum computer.</dd>
+      <dt>Trainable quantum circuit</dt><dd>A different quantum model: a small quantum program with adjustable settings, tuned step by step until its output matches the training data, much like training a neural network.</dd>
+      <dt>Gaussian process</dt><dd>A standard machine-learning method on an ordinary computer. It also predicts from similar moments, using a different similarity measure.</dd>
+      <dt>UTide</dt><dd>The method oceanographers use: it fits a sum of regular waves, one per tidal rhythm.</dd>
+      <dt>NOAA forecast</dt><dd>The official forecast from the US National Oceanic and Atmospheric Administration, built from decades of data. It is shown for reference, not as a fair competitor.</dd>
+    </dl>
+  </details>
+</section>
+
+<section aria-labelledby="s2">
+  <h2 id="s2">Try it: train the quantum model yourself</h2>
+  <p>Your browser can run the quantum model right here. Choose how many hours it learns from
+    and how much it smooths, and see how the 2023 score changes. With 1000 hours, training takes
+    about a second.</p>
+  <div class="controls">
+    <label for="ntrain"><span>Hours to learn from</span>
+      <select id="ntrain">
+        <option>50</option><option>100</option><option>250</option>
+        <option>500</option><option selected>1000</option>
+      </select>
+    </label>
+    <label for="alpha" class="grow"><span>Smoothing: <strong id="alphalabel"></strong>
+      <span class="hint">(left: follow the training hours closely &middot; right: smoother)</span></span>
+      <input type="range" id="alpha" min="-4" max="1" step="0.05">
+    </label>
+    <button type="button" id="resample">Pick different hours</button>
+  </div>
+  <div class="tiles" id="livetiles" aria-live="polite"></div>
+  <div id="chart2" class="chart" role="img" aria-label="Observed water level and the in-browser quantum model prediction"></div>
+  <p class="note">Things to try: drop to 50 hours and watch the score fall, because a handful of
+    examples is not enough to learn how five rhythms combine. Then move the smoothing slider
+    to either end and see how the prediction changes.</p>
+  <details class="explain">
+    <summary>For the curious: how can a browser run a quantum model?</summary>
+    <p>For this particular way of storing data in qubits, the similarity of two hours has an exact
+      formula that an ordinary computer can evaluate quickly:
+      <span class="math">similarity = &prod;<sub>j</sub> cos&sup2;((&phi;<sub>j</sub> &minus; &phi;&prime;<sub>j</sub>)/2)</span>,
+      where &phi;<sub>j</sub> are the five clock-hand angles of the two hours. It gives exactly the
+      same numbers as simulating the quantum circuit (we checked: they agree to 15 decimal
+      places). The model then solves a standard equation, called kernel ridge regression, to
+      decide how much weight each training hour gets. The smoothing slider is that equation's
+      regularization strength.</p>
+    <p>That a formula like this exists is an important point: it means this quantum model
+      gives <em>no</em> speed-up over an ordinary computer. It is useful here to understand what
+      quantum models are good at, not as a quantum advantage.</p>
+  </details>
+</section>
+
+<section aria-labelledby="s3">
+  <h2 id="s3">Why does the trainable quantum circuit lag behind?</h2>
+  <p>
+    Think of the tide as a piece of music made of a few notes, the tidal rhythms and their
+    combinations. A small quantum circuit can only play certain notes. We worked out the best
+    score anyone could reach using exactly those notes: the <strong>ceiling</strong> (striped bars).
+  </p>
+  <p>
+    The ceiling is as high as the best methods, so the circuit has all the notes it needs. Its
+    lower score comes from <em>learning</em> how loudly to play each note: training is slow and
+    gets stuck. Giving the circuit more layers adds notes the tide doesn't contain, and that
+    makes learning harder still.
+  </p>
+  <div id="bars" class="bars" role="img" aria-label="Scores of each model compared with the frequency ceilings"></div>
+  <p class="note">Model scores are averages over five different sets of 1000 training hours.
+    The ceilings use all 17,520 hours of 2021&ndash;2022. The bars start at 0.80 so that the
+    differences are visible.</p>
+</section>
+
+<section aria-labelledby="s4">
+  <h2 id="s4">So, is the quantum computer better?</h2>
+  <p>
+    Not here. On the tides, and on three other real-world problems in the full study (wind
+    farms, football shots and galaxy distances), no quantum model beat the best ordinary
+    methods. But the quantum model with the right way of storing data came close, and the
+    reasons it does well or badly can be explained and measured. That is what makes it useful
+    to study: knowing <em>where</em> a quantum model fits is the first step to finding problems
+    where it might one day help.
+  </p>
+</section>
+
+<footer>
+  <p>From the project <em>Where might quantum regression models fit? A benchmark across tides,
+    wind, soccer and galaxy redshifts</em> by Tuan Bui.
+    <a href="../report/main.pdf">Read the paper</a> &middot;
+    <a href="#" id="repolink">Code</a>.
+    Tide data: NOAA station 9414290, San Francisco (public domain).</p>
+</footer>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/uplot@1.6.31/dist/uPlot.iife.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

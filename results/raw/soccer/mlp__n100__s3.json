@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "mlp",
+ "family": "classical",
+ "n_train": 100,
+ "seed": 3,
+ "n_test": 1162,
+ "params": "{\"hidden\": 54, \"layers\": 3, \"alpha\": 0.07585375984921966, \"lr\": 0.002211909489476457}",
+ "cv_loss": 0.15137158861695757,
+ "n_trials": 10,
+ "tune_seconds": 0.5844489161390811,
+ "fit_seconds": 0.02136787516064942,
+ "n_parameters": null,
+ "brier": 0.16247367507168622,
+ "log_loss": 0.5144637547594575,
+ "brier_skill": -1.0112315604893234
+}

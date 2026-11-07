@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "mlp",
+ "family": "classical",
+ "n_train": 1000,
+ "seed": 0,
+ "n_test": 2000,
+ "params": "{\"hidden\": 59, \"layers\": 2, \"alpha\": 0.00015414734761917112, \"lr\": 0.006074996073425695}",
+ "cv_loss": 0.10204963094251124,
+ "n_trials": 10,
+ "tune_seconds": 6.849082208005711,
+ "fit_seconds": 0.11735333385877311,
+ "n_parameters": null,
+ "rmse": 0.1483825435257674,
+ "mae": 0.1192444481474664,
+ "r2": 0.9266950008330583
+}

@@ -1,0 +1,17 @@
+# Tides: predict hourly sea level from the phases of the main tidal constituents.
+# Source: NOAA CO-OPS Data API (public domain). https://api.tidesandcurrents.noaa.gov/api/prod/
+name: tides
+station: "9414290"          # San Francisco, CA (alternatives: 8518750 The Battery NY, 9447130 Seattle WA)
+station_name: San Francisco
+latitude: 37.806305         # from NOAA station metadata; UTide needs it for nodal corrections
+# Constituents for the harmonic-analysis baseline (models/domain.py). The 8 major ones are the
+# standard choice when the training record is short or sparse.
+harmonic_constituents: [M2, S2, N2, K2, K1, O1, P1, Q1]
+years: [2021, 2022, 2023]   # verified hourly heights, fetched one year per request
+datum: MSL
+# Constituents used as angle features (phase = speed * hours since 2000-01-01 UTC, mod 2*pi).
+# Speeds in degrees/hour (standard values). 5 constituents -> 5 angle features -> 5 qubits.
+constituents: [M2, S2, N2, K1, O1]
+split:
+  kind: temporal
+  test_start: "2023-01-01"  # train on 2021-2022, test on 2023

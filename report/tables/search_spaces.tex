@@ -1,0 +1,26 @@
+\begin{tabular}{@{}lll@{}}
+\toprule
+Model & Hyperparameter & Range \\
+\midrule
+Ridge / logistic & \texttt{alpha} & $[10^{-4}, 100]$, log \\
+Random Fourier features & \texttt{n\_components} & $[50, 500]$, integer \\
+ & \texttt{gamma} & $[0.01, 10]$, log \\
+ & \texttt{alpha} & $[10^{-4}, 100]$, log \\
+Multilayer perceptron & \texttt{hidden} & $[8, 128]$, integer \\
+ & \texttt{layers} & $[1, 3]$, integer \\
+ & \texttt{alpha} & $[10^{-6}, 0.1]$, log \\
+ & \texttt{lr} & $[10^{-4}, 0.01]$, log \\
+Gradient boosting & \texttt{max\_depth} & $[2, 8]$, integer \\
+ & \texttt{lr} & $[0.01, 0.3]$, log \\
+ & \texttt{max\_iter} & $[50, 500]$, integer \\
+Gaussian process & \multicolumn{2}{l}{none (marginal likelihood)} \\
+Re-uploading circuit & \texttt{n\_layers} & $[1, 4]$, integer \\
+ & \texttt{lr} & $[10^{-3}, 0.1]$, log \\
+Quantum kernel & \texttt{feature\_map} & \{angle, iqp\} \\
+ & \texttt{reps} & $[1, 3]$, integer \\
+ & \texttt{bandwidth} & $[0.05, 2]$, log \\
+ & \texttt{alpha} & $[10^{-6}, 1]$, log \\
+Wind: power curve & \texttt{bin\_width} & $[0.25, 1.5]$, linear \\
+Photo-z: knn & \texttt{k} & $[3, 50]$, integer \\
+\bottomrule
+\end{tabular}

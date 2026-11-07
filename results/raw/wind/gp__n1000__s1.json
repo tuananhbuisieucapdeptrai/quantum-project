@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "gp",
+ "family": "classical",
+ "n_train": 1000,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 2.0097344999667257,
+ "n_parameters": null,
+ "rmse": 0.04551248213665041,
+ "mae": 0.03153308993979689,
+ "r2": 0.9804964064698071
+}

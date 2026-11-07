@@ -1,0 +1,19 @@
+{
+ "dataset": "photoz",
+ "model": "ridge",
+ "family": "classical",
+ "n_train": 50,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{\"alpha\": 0.17096232052870358}",
+ "cv_loss": 0.03159627648283088,
+ "n_trials": 10,
+ "tune_seconds": 0.037471374962478876,
+ "fit_seconds": 0.0018201251514256,
+ "n_parameters": null,
+ "rmse": 0.05166343202741821,
+ "mae": 0.02694553885326865,
+ "r2": 0.746964949611813,
+ "sigma_nmad": 0.024510162119443374,
+ "outlier_frac": 0.004
+}

@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "qkernel",
+ "family": "quantum",
+ "n_train": 50,
+ "seed": 0,
+ "n_test": 1162,
+ "params": "{\"feature_map\": \"angle\", \"reps\": 2, \"bandwidth\": 0.8900708329715352, \"alpha\": 5.124441683726439e-06}",
+ "cv_loss": 0.10173929642013291,
+ "n_trials": 10,
+ "tune_seconds": 0.7038752080406994,
+ "fit_seconds": 0.03502470813691616,
+ "n_parameters": 50,
+ "brier": 0.12284113077400971,
+ "log_loss": 1.4360777916528957,
+ "brier_skill": -0.5206276280134399
+}

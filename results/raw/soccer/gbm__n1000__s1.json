@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "gbm",
+ "family": "classical",
+ "n_train": 1000,
+ "seed": 1,
+ "n_test": 1162,
+ "params": "{\"max_depth\": 4, \"lr\": 0.016473134545751462, \"max_iter\": 91}",
+ "cv_loss": 0.07708888274373399,
+ "n_trials": 10,
+ "tune_seconds": 3.508574333973229,
+ "fit_seconds": 0.06296520796604455,
+ "n_parameters": null,
+ "brier": 0.0758550387767564,
+ "log_loss": 0.27481167333082723,
+ "brier_skill": 0.06100451077603275
+}

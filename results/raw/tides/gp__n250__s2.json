@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "gp",
+ "family": "classical",
+ "n_train": 250,
+ "seed": 2,
+ "n_test": 2000,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 0.12182929180562496,
+ "n_parameters": null,
+ "rmse": 0.14366242831862383,
+ "mae": 0.11469414829048749,
+ "r2": 0.9312845529165807
+}

@@ -1,0 +1,19 @@
+{
+ "dataset": "photoz",
+ "model": "rff",
+ "family": "classical",
+ "n_train": 100,
+ "seed": 3,
+ "n_test": 2000,
+ "params": "{\"n_components\": 106, \"gamma\": 0.04185319668991122, \"alpha\": 0.00020361192966098586}",
+ "cv_loss": 0.02658103742968157,
+ "n_trials": 10,
+ "tune_seconds": 0.07931191707029939,
+ "fit_seconds": 0.005081166047602892,
+ "n_parameters": null,
+ "rmse": 0.06171492062937741,
+ "mae": 0.030198347711717023,
+ "r2": 0.638927405216754,
+ "sigma_nmad": 0.02157540334342786,
+ "outlier_frac": 0.0145
+}

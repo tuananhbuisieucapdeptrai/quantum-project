@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "vqc",
+ "family": "quantum",
+ "n_train": 250,
+ "seed": 0,
+ "n_test": 2000,
+ "params": "{\"n_layers\": 1, \"lr\": 0.04626362841475587}",
+ "cv_loss": 0.04644799908514926,
+ "n_trials": 10,
+ "tune_seconds": 144.99989487486891,
+ "fit_seconds": 5.389250583946705,
+ "n_parameters": 14,
+ "rmse": 0.05829584117932081,
+ "mae": 0.04143634480872493,
+ "r2": 0.9680015647829899
+}

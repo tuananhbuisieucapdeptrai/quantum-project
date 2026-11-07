@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "domain:power_curve",
+ "family": "domain",
+ "n_train": 1000,
+ "seed": 2,
+ "n_test": 2000,
+ "params": "{\"bin_width\": 0.6629185262548427}",
+ "cv_loss": 0.03321272093499556,
+ "n_trials": 10,
+ "tune_seconds": 0.021894375095143914,
+ "fit_seconds": 0.0003584169317036867,
+ "n_parameters": 23,
+ "rmse": 0.045570903946284415,
+ "mae": 0.03090297675007851,
+ "r2": 0.9804463030041519
+}

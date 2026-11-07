@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "gbm",
+ "family": "classical",
+ "n_train": 100,
+ "seed": 2,
+ "n_test": 2000,
+ "params": "{\"max_depth\": 2, \"lr\": 0.057361058762412646, \"max_iter\": 133}",
+ "cv_loss": 0.12447085204612203,
+ "n_trials": 10,
+ "tune_seconds": 0.9504907499067485,
+ "fit_seconds": 0.027878083055838943,
+ "n_parameters": null,
+ "rmse": 0.10402643225762402,
+ "mae": 0.07287301280512094,
+ "r2": 0.8981077852405366
+}

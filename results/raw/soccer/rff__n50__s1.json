@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "rff",
+ "family": "classical",
+ "n_train": 50,
+ "seed": 1,
+ "n_test": 1162,
+ "params": "{\"n_components\": 486, \"gamma\": 0.08715103205978142, \"alpha\": 1.425396519512469}",
+ "cv_loss": 0.1302391759330637,
+ "n_trials": 10,
+ "tune_seconds": 0.15092729195021093,
+ "fit_seconds": 0.014587208861485124,
+ "n_parameters": null,
+ "brier": 0.08196738712876328,
+ "log_loss": 0.3048982663646312,
+ "brier_skill": -0.014659118478596467
+}

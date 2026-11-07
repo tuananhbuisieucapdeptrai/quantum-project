@@ -1,0 +1,17 @@
+{
+ "dataset": "soccer",
+ "model": "gp",
+ "family": "classical",
+ "n_train": 1000,
+ "seed": 0,
+ "n_test": 1162,
+ "params": "{}",
+ "cv_loss": NaN,
+ "n_trials": 0,
+ "tune_seconds": 0.0,
+ "fit_seconds": 1.4847784999292344,
+ "n_parameters": null,
+ "brier": 0.07320537482838962,
+ "log_loss": 0.27746265025512934,
+ "brier_skill": 0.09380421051381937
+}

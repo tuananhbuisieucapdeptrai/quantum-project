@@ -1,0 +1,17 @@
+{
+ "dataset": "tides",
+ "model": "rff",
+ "family": "classical",
+ "n_train": 500,
+ "seed": 1,
+ "n_test": 2000,
+ "params": "{\"n_components\": 186, \"gamma\": 0.027559267640273756, \"alpha\": 0.0003581224678700232}",
+ "cv_loss": 0.10397803148172524,
+ "n_trials": 10,
+ "tune_seconds": 0.19792374991811812,
+ "fit_seconds": 0.011895125033333898,
+ "n_parameters": null,
+ "rmse": 0.14857872408529735,
+ "mae": 0.1199468342822064,
+ "r2": 0.9265010356647142
+}

@@ -1,0 +1,15 @@
+# Soccer: expected goals (probability that a shot is scored) from shot geometry and context.
+# Source: StatsBomb Open Data (https://github.com/statsbomb/open-data). Attribution to StatsBomb required.
+name: soccer
+# (competition_id, season_id) pairs; see data/competitions.json in the StatsBomb repo.
+competitions:
+  - [43, 106]   # FIFA World Cup 2022
+  - [55, 282]   # UEFA Euro 2024
+  - [55, 43]    # UEFA Euro 2020
+  - [223, 282]  # Copa America 2024
+exclude_penalties: true
+download_workers: 4
+split:
+  kind: group               # by match_id, so one match never sits in both train and test
+  test_size: 0.25
+  seed: 0

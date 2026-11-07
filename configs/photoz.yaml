@@ -1,0 +1,16 @@
+# Astronomy: photometric redshift of galaxies from SDSS ugriz magnitudes.
+# Source: SDSS SkyServer DR18 SQL search (free; acknowledge SDSS).
+name: photoz
+release: dr18
+# ~859k galaxies pass the cuts below. Keep those with fiberID % fiber_mod == fiber_rem: a
+# sky- and plate-uniform ~1/17 subsample (~50k), instead of the first N rows by ID, which
+# would come from only a few survey plates.
+fiber_mod: 17
+fiber_rem: 7
+batch_size: 10000           # rows per API request (keyset pagination on specObjID)
+r_max: 19.0                 # dereddened r-band magnitude cut
+z_max: 1.0
+split:
+  kind: random
+  test_size: 0.25
+  seed: 0

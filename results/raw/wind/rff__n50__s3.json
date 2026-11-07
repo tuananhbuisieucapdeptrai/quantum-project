@@ -1,0 +1,17 @@
+{
+ "dataset": "wind",
+ "model": "rff",
+ "family": "classical",
+ "n_train": 50,
+ "seed": 3,
+ "n_test": 2000,
+ "params": "{\"n_components\": 166, \"gamma\": 0.17591529098468492, \"alpha\": 0.00502516690171547}",
+ "cv_loss": 0.05017180922874633,
+ "n_trials": 10,
+ "tune_seconds": 0.07145091611891985,
+ "fit_seconds": 0.008645000169053674,
+ "n_parameters": null,
+ "rmse": 0.04845639753770419,
+ "mae": 0.03468792329429733,
+ "r2": 0.9778916749284998
+}

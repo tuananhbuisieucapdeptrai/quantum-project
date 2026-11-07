@@ -1,0 +1,16 @@
+# Wind: predict turbine power from wind speed and wind direction.
+# Source: Kelmarsh wind farm SCADA, Zenodo record 8252025 (CC-BY 4.0), Cubico Sustainable Investments.
+# Only one turbine's CSV is pulled from the remote zip (HTTP range requests, ~17 MB).
+name: wind
+zenodo_record: "8252025"
+archive: Kelmarsh_SCADA_2017_3083.zip   # 2017: first full year with wind direction logged (2016 starts in May)
+turbine: 1                  # Kelmarsh 1..6 (Senvion MM92, 2050 kW rated)
+rated_power_kw: 2050
+use_ambient_temp: false     # optional 3rd feature (air-density proxy)
+cleaning:
+  require_full_availability: true   # 'Data Availability' == 1
+  drop_downtime_curtailment: true   # 'Lost Production to Downtime and Curtailment Total (kWh)' == 0
+  min_wind_speed: 0.0
+split:
+  kind: temporal
+  test_start: "2017-10-01"  # train Jan-Sep, test Oct-Dec
