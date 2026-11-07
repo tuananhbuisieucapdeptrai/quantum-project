@@ -5,6 +5,10 @@ test one hypothesis: quantum models (sums of Fourier modes in their rotation-ang
 should have the most natural fit on data with **genuinely periodic inputs** and in
 **small-data** regimes.
 
+> **▶ [Try the interactive demo](https://tuananhbuisieucapdeptrai.github.io/quantum-project/demo/)**:
+> can a quantum computer predict the tide? Train a quantum-kernel model in your browser; no
+> quantum background needed. &nbsp;·&nbsp; **[Read the paper (PDF)](report/main.pdf)**
+
 | Domain | Why it's here |
 |---|---|
 | 🌊 **Tides** (NOAA, San Francisco) | Inputs are tidal phases; classical harmonic analysis is itself a Fourier series |
